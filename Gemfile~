@@ -16,4 +16,8 @@ end
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'turbolinks'
+group :assets do
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier'
+end

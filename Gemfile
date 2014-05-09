@@ -21,3 +21,8 @@ group :assets do
   gem 'coffee-rails'
   gem 'uglifier'
 end
+
+group :production do
+	ruby '2.0.0'
+	gem 'rails_12factor'
+end
