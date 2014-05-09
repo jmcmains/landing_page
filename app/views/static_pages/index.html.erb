@@ -207,7 +207,7 @@ absolutely thrilled.&quot;
 
 		<script>
 $(function() {
-  var url = $.url();
+var url = purl(); // plain JS version
   $('#title').text(url.param('utm_title'));
   document.title = url.param('utm_title');
     $('#subtitle').text(url.param('utm_description'));

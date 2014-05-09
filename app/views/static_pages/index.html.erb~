@@ -141,7 +141,7 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	}
 		@media only screen and (max-width: 640px){
 	  .mobile_hide {
-	    display:hidden;
+	    display:none;
 	  }
 	}
   </style>
@@ -164,7 +164,7 @@ The most common question we get at Rubberbanditz is “which band is right for m
 </tr>
 <tr>
 <td>
-<h3 class="proTitle"> Athletes weighing <span class="mobile_hide"><br></span>&lt; 140 lbs</h3>
+<h3 class="proTitle"> Athletes weighing <br class="mobile_hide">&lt; 140 lbs</h3>
 <%= image_tag("Medium-Heavy-Resistance-Band-Combo.jpg", class: "proImg") %>
 <p class="proText">Medium, Heavy Combo</p>
 <p class="proPrice">$29.99 <span class="atc">Add to Cart</span></p>
@@ -207,7 +207,7 @@ absolutely thrilled.&quot;
 
 		<script>
 $(function() {
-  var url = $.url();
+var url = purl(); // plain JS version
   $('#title').text(url.param('utm_title'));
   document.title = url.param('utm_title');
     $('#subtitle').text(url.param('utm_description'));
