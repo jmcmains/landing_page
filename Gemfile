@@ -11,3 +11,8 @@ end
 group :development, :test do
   gem 'sqlite3'
 end
+
+
+gem 'jquery-rails'
+
+gem 'jquery-ui-rails'
