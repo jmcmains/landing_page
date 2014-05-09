@@ -207,12 +207,11 @@ absolutely thrilled.&quot;
 
 		<script>
 $(function() {
-var url = $.url(); // plain JS version
-  $('#title').text(url.param('utm_title'));
-  document.title = url.param('utm_title');
-    $('#subtitle').text(url.param('utm_description'));
-    $('#coupon_code').text(url.param('utm_coupon'));
-    $('#coupon_description').text(url.param('utm_coupon_description'));
+  $('#title').text($.url().param('utm_title'));
+  document.title = $.url().param('utm_title');
+    $('#subtitle').text($.url().param('utm_description'));
+    $('#coupon_code').text($.url().param('utm_coupon'));
+    $('#coupon_description').text($.url().param('utm_coupon_description'));
 });
 
 </script>
