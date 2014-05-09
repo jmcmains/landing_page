@@ -38,6 +38,7 @@
 	  font-weight:bold;
 	  border:1px solid black;
 	  display:inline;
+	  cursor:pointer;
   }
   #proTable {
     width:440px;
@@ -58,6 +59,7 @@
   .proText {
     padding:0;
     margin:0;
+    margin-bottom:5px;
   }
   .proPrice {
     font-weight:bold;
@@ -124,9 +126,10 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	    width:100%;
 	  }
 	  #proTable {
-	    width:90%;
-	    margin-left:auto;
-	    margin-right:auto;
+	    width:auto;
+	    
+	    padding:0;
+	    margin:0;
 	  }
 	  #testimonial {
 	    display:block;
@@ -140,10 +143,12 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	  }
 	  .atc {
 	    display:block;
-	    width:auto;
+	    max-width:200px;
+	    width:70%;
 	    margin-left:auto;
 	    margin-right:auto;
 	    padding:15px;
+	    margin-top:10px
 	  }
 	  
 	}
