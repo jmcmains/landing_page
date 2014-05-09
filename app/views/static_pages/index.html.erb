@@ -36,7 +36,8 @@
 	  background-color:#9edd56;
 	  padding:3px;
 	  font-weight:bold;
-	  border:1px solid black
+	  border:1px solid black;
+	  display:inline;
   }
   #proTable {
     width:440px;
@@ -57,9 +58,11 @@
   .proText {
     padding:0;
     margin:0;
+    margin-bottom:5px;
   }
   .proPrice {
     font-weight:bold;
+    display:inline;
   }
   #testimonial {
 	  position:absolute;
@@ -98,6 +101,9 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	  font-size:30px;
 	  display:block;
 	}
+	.mobile_show {
+	    display:none;
+	  }
 	@media only screen and (max-width: 640px){
 	  #coupon {
 	  position:relative;
@@ -105,32 +111,24 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
     margin-left:auto;
     margin-right:auto;
 	}
-	}
-	@media only screen and (max-width: 640px){
 	  #band_in_action {
 	    display: block;
 	    width:90%;
 	    margin-left:auto;
 	    margin-right:auto;
 	  }
-	}
-	@media only screen and (max-width: 640px){
 	  body {
 	    background-image: none;
 	  }
-	}
-	@media only screen and (max-width: 640px){
 	  #proTable td {
 	    display:block;
 	    width:100%;
 	  }
-	}
-	@media only screen and (max-width: 640px){
 	  #proTable {
 	    width:90%;
+	    margin-left:auto;
+	    margin-right:auto;
 	  }
-	}
-	@media only screen and (max-width: 640px){
 	  #testimonial {
 	    display:block;
 	    position:relative;
@@ -138,11 +136,17 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	    margin-left:auto;
 	    margin-right:auto;
 	  }
-	}
-		@media only screen and (max-width: 640px){
 	  .mobile_hide {
 	    display:none;
 	  }
+	  .atc {
+	    display:block;
+	    width:auto;
+	    margin-left:auto;
+	    margin-right:auto;
+	    padding:15px;
+	  }
+	  
 	}
   </style>
 </head>
@@ -167,13 +171,13 @@ The most common question we get at Rubberbanditz is “which band is right for m
 <h3 class="proTitle"> Athletes weighing <br class="mobile_hide">&lt; 140 lbs</h3>
 <%= image_tag("Medium-Heavy-Resistance-Band-Combo.jpg", class: "proImg") %>
 <p class="proText">Medium, Heavy Combo</p>
-<p class="proPrice">$29.99 <span class="atc">Add to Cart</span></p>
+<p class="proPrice">$29.99 <div class="atc">Add to Cart</div></p>
 </td>
 <td>
 <h3 class="proTitle">Athletes weighing <br class="mobile_hide">140 - 250 lbs</h3>
 <%= image_tag("Heavy-Robust-Resistance-Band-Combo.jpg", class: "proImg") %>
 <p class="proText">Heavy, Robust Combo</p>
-<p class="proPrice">$37.99 <span class="atc">Add to Cart</span></p>
+<p class="proPrice">$37.99 <div class="atc">Add to Cart</div></p>
 </td>
 </tr>
 <tr>
@@ -181,12 +185,12 @@ The most common question we get at Rubberbanditz is “which band is right for m
 <h3 class="proTitle">Athletes weighing <br class="mobile_hide">250 - 300 lbs</h3>
 <%= image_tag("Heavy-Power-Resistance-Band-Combo.jpg", class: "proImg") %>
 <p class="proText">Heavy, Power Combo</p>
-<p class="proPrice">$48.99 <span class="atc">Add to Cart</span></p></td>
+<p class="proPrice">$48.99 <div class="atc">Add to Cart</div></p></td>
 <td>
 <h3 class="proTitle">Athletes weighing <br class="mobile_hide">300 lbs +</h3>
 <%= image_tag("Robust-Power-Resistance-Band-Combo.jpg", class: "proImg") %>
 <p class="proText">Robust, Power Combo</p>
-<p class="proPrice">$52.99 <span class="atc">Add to Cart</span></p></td>
+<p class="proPrice">$52.99<div class="atc">Add to Cart</div></p></td>
 </tr>
 <tr>
 <td colspan="2" style="padding:0;text-align:left;">
