@@ -127,7 +127,7 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	}
 	@media only screen and (max-width: 640px){
 	  #proTable {
-	    width:100%;
+	    width:90%;
 	  }
 	}
 	@media only screen and (max-width: 640px){
@@ -150,7 +150,7 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 <%= image_tag("black_logo.png", id: "logo") %>
 <h1 id="title">[Title From Ad]</h1>
 <h2 id="subtitle">[if there is a subtitle description]</h2>
-<%= image_tag("landing_page_bg.png", id: "band_in_action") %>
+<%= image_tag("landing_page_bg_mobile.png", id: "band_in_action") %>
 <div id="coupon">
 <p>Use the code:
 <span id="coupon_code">CODE</span>
@@ -207,12 +207,11 @@ absolutely thrilled.&quot;
 
 		<script>
 $(function() {
-var url = purl(); // plain JS version
-  $('#title').text(url.param('utm_title'));
-  document.title = url.param('utm_title');
-    $('#subtitle').text(url.param('utm_description'));
-    $('#coupon_code').text(url.param('utm_coupon'));
-    $('#coupon_description').text(url.param('utm_coupon_description'));
+  $('#title').text($.url().param('utm_title'));
+  document.title = $.url().param('utm_title');
+    $('#subtitle').text($.url().param('utm_description'));
+    $('#coupon_code').text($.url().param('utm_coupon'));
+    $('#coupon_description').text($.url().param('utm_coupon_description'));
 });
 
 </script>
