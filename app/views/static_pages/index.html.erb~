@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>[Title From Ad]</title>
+  <title>Pull up Bands</title>
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
  <%= javascript_include_tag "application" %>
  <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
@@ -28,17 +28,45 @@
 	  margin-left:10px;
 	}
 	.proImg {
-	  width:100px;
-	  height:auto;
+	  width:100%;
+    height:100%;
+  }
+  .proOver {
+    width:100%;
+    height:100%;
+    background-color:#ef4036;
+    opacity:.5;
+    color:white;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:10;
+    font-size:30px;
+    display:none;
+    line-height:40px;
+  }
+
+.proImg:hover + .proOver {
+    display: block;
+  }
+
+  .imageContainer {
+    position: relative;
+    width:100px;
+	  height:84px;
 	  border:1px solid black;
+	  margin-left:auto;
+	  margin-right:auto;
   }
   .atc {
 	  background-color:#9edd56;
 	  padding:3px;
 	  font-weight:bold;
-	  border:1px solid black;
+	  border:2px outset black;
+	  border-radius:2px;
 	  display:inline;
-	  cursor:pointer;
+	  text-decoration:none;
+	  color:black;
   }
   #proTable {
     width:440px;
@@ -48,8 +76,8 @@
     width:50%;
     text-align:center;
     padding:10px;
-    padding-top:5px;
-    padding-bottom:5px;
+    padding-top:10px;
+    padding-bottom:10px;
     
   }
   .proTitle {
@@ -84,7 +112,7 @@
 	  display:none
 	}
 	#coupon {
-	  background-color: yellow;
+	  background-color: #ffa;
 	  border:5px dashed #000000;
 	  border-radius:15px;
 	  width:200px;
@@ -124,6 +152,7 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	  #proTable td {
 	    display:block;
 	    width:100%;
+	    vertical-align:top;
 	  }
 	  #proTable {
 	    width:auto;
@@ -148,7 +177,7 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	    margin-left:auto;
 	    margin-right:auto;
 	    padding:15px;
-	    margin-top:10px
+	    margin-top:5px;
 	  }
 	  
 	}
@@ -156,49 +185,57 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 </head>
 <body>
 <%= image_tag("black_logo.png", id: "logo") %>
-<h1 id="title">[Title From Ad]</h1>
-<h2 id="subtitle">[if there is a subtitle description]</h2>
+<h1 id="title">Pull up bands</h1>
+<h2 id="subtitle">Tough on Muscles, Easy on Wallets</h2>
 <%= image_tag("landing_page_bg_mobile.png", id: "band_in_action") %>
 <div id="coupon">
 <p>Use the code:
 <span id="coupon_code">CODE</span>
-When checking out to <span id="coupon_description">description</span></p>
+<span id="coupon_description">description</span></p>
 </div>
 <table id="proTable">
 <tr>
 <td colspan='2' style="text-align:left">
-The most common question we get at Rubberbanditz is “which band is right for me?” <b>All you need to know is your weight.</b> Once you find your band combo, click on it to see the item in our store.
+The most common question we get at Rubberbanditz is “which band is right for me?” <b>All you need to know is your weight.</b> Once you find your band combo, click the green button to add it to your cart.
 </td>
 </tr>
 <tr>
 <td>
 <h3 class="proTitle"> Athletes weighing <br class="mobile_hide">&lt; 140 lbs</h3>
-<%= image_tag("Medium-Heavy-Resistance-Band-Combo.jpg", class: "proImg") %>
+<a href="http://rubberbanditz.com/product/best-sellers/medium-heavy-resistance-band-combo">
+<div class="imageContainer"><%= image_tag("Medium-Heavy-Resistance-Band-Combo.jpg", class: "proImg") %>
+<div class="proOver">more info</div></div></a>
 <p class="proText">Medium, Heavy Combo</p>
-<p class="proPrice">$29.99 <div class="atc">Add to Cart</div></p>
+<p class="proPrice">$29.99 <a class="atc"href="http://rubberbanditz.com/store/cart?task=add-to-cart-anchor&cart66ItemId=26">Add to Cart</a></p>
 </td>
 <td>
 <h3 class="proTitle">Athletes weighing <br class="mobile_hide">140 - 250 lbs</h3>
-<%= image_tag("Heavy-Robust-Resistance-Band-Combo.jpg", class: "proImg") %>
+<a href="http://rubberbanditz.com/product/best-sellers/heavy-robust-resistance-band-combo">
+<div class="imageContainer"><%= image_tag("Heavy-Robust-Resistance-Band-Combo.jpg", class: "proImg") %>
+<div class="proOver">more info</div></div></a>
 <p class="proText">Heavy, Robust Combo</p>
-<p class="proPrice">$37.99 <div class="atc">Add to Cart</div></p>
+<p class="proPrice">$37.99 <a class="atc"href="http://rubberbanditz.com/store/cart?task=add-to-cart-anchor&cart66ItemId=27">Add to Cart</a></p>
 </td>
 </tr>
 <tr>
 <td>
 <h3 class="proTitle">Athletes weighing <br class="mobile_hide">250 - 300 lbs</h3>
-<%= image_tag("Heavy-Power-Resistance-Band-Combo.jpg", class: "proImg") %>
+<a href="http://rubberbanditz.com/product/band-combinations/heavy-power-resistance-band-combo">
+<div class="imageContainer"><%= image_tag("Heavy-Power-Resistance-Band-Combo.jpg", class: "proImg") %>
+<div class="proOver">more info</div></div></a>
 <p class="proText">Heavy, Power Combo</p>
-<p class="proPrice">$48.99 <div class="atc">Add to Cart</div></p></td>
+<p class="proPrice">$48.99 <a class="atc"href="http://rubberbanditz.com/store/cart?task=add-to-cart-anchor&cart66ItemId=28">Add to Cart</a></p></td>
 <td>
 <h3 class="proTitle">Athletes weighing <br class="mobile_hide">300 lbs +</h3>
-<%= image_tag("Robust-Power-Resistance-Band-Combo.jpg", class: "proImg") %>
+<a href="http://rubberbanditz.com/product/band-combinations/robust-power-resistance-band-combo">
+<div class="imageContainer"><%= image_tag("Robust-Power-Resistance-Band-Combo.jpg", class: "proImg") %>
+<div class="proOver">more info</div></div></a>
 <p class="proText">Robust, Power Combo</p>
-<p class="proPrice">$52.99<div class="atc">Add to Cart</div></p></td>
+<p class="proPrice">$52.99 <a class="atc"href="http://rubberbanditz.com/store/cart?task=add-to-cart-anchor&cart66ItemId=29">Add to Cart</a></p></td>
 </tr>
 <tr>
 <td colspan="2" style="padding:0;text-align:left;">
-<p>For more information on pull up bands, read our <a href="#">Pull up exercise page</a>, or visit our <a href="#">full store</a>.</p>
+<p>For more information on pull up bands, read our <a href="http://rubberbanditz.com/info-center/pull-up-bands/">Pull up exercise page</a>, or visit our <a href="http://rubberbanditz.com/store/">full store</a>.</p>
 </td>
 </tr>
 </table>
@@ -210,19 +247,6 @@ hope to be able to pull up without the bands, but for now I am
 absolutely thrilled.&quot;
 <div id="author">- Kathy</div>
 </div>
-
-
-
-		<script>
-$(function() {
-  $('#title').text($.url().param('utm_title'));
-  document.title = $.url().param('utm_title');
-    $('#subtitle').text($.url().param('utm_description'));
-    $('#coupon_code').text($.url().param('utm_coupon'));
-    $('#coupon_description').text($.url().param('utm_coupon_description'));
-});
-
-</script>
 </body>
 
 
