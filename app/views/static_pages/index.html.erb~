@@ -112,6 +112,7 @@
 	  display:none
 	}
 	#coupon {
+	display:none;
 	  background-color: #ffa;
 	  border:5px dashed #000000;
 	  border-radius:15px;
@@ -135,11 +136,11 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	  }
 	@media only screen and (max-width: 640px){
 	  #coupon {
-	  position:relative;
-    width:90%;
-    margin-left:auto;
-    margin-right:auto;
-	}
+	    position:relative;
+      width:90%;
+      margin-left:auto;
+      margin-right:auto;
+	  }
 	  #band_in_action {
 	    display: block;
 	    width:90%;
@@ -151,8 +152,10 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	  }
 	  #proTable td {
 	    display:block;
-	    width:100%;
+	    width:90%;
 	    vertical-align:top;
+	    margin-left:auto;
+	    margin-right:auto;
 	  }
 	  #proTable {
 	    width:auto;
