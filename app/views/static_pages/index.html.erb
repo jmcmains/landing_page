@@ -134,6 +134,23 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	.mobile_show {
 	    display:none;
 	  }
+	@media only screen and (max-width: 450px){
+	#proTable td {
+	    display:block;
+	    width:auto;
+	    vertical-align:top;
+	    margin-left:auto;
+	    margin-right:auto;
+	  }
+	  #proTable {
+	    width:90%;
+	    padding:0;
+	    margin:0;
+	  }
+	  .mobile_hide {
+	    display:none;
+	  }
+	}
 	@media only screen and (max-width: 640px){
 	  #coupon {
 	    position:relative;
@@ -150,17 +167,10 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	  body {
 	    background-image: none;
 	  }
-	  #proTable td {
-	    display:block;
+	  #proTable {
 	    width:90%;
-	    vertical-align:top;
 	    margin-left:auto;
 	    margin-right:auto;
-	  }
-	  #proTable {
-	    width:auto;
-	    padding:0;
-	    margin:0;
 	  }
 	  #testimonial {
 	    display:block;
@@ -168,9 +178,6 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	    width:90%;
 	    margin-left:auto;
 	    margin-right:auto;
-	  }
-	  .mobile_hide {
-	    display:none;
 	  }
 	  .atc {
 	    display:block;
@@ -190,26 +197,29 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 <h2 id="subtitle">Tough on Muscles, Easy on Wallets</h2>
 <%= image_tag("landing_page_bg_mobile.png", id: "band_in_action") %>
 <div id="coupon">
-<p>Use the code:
-<span id="coupon_code">CODE</span>
-<span id="coupon_description">description</span></p>
+  <p>Use the code:
+  <span id="coupon_code">CODE</span>
+  <span id="coupon_description">description</span></p>
 </div>
 <table id="proTable">
-<tr>
-<td colspan='2' style="text-align:left">
-The most common question we get at Rubberbanditz is “which band is right for me?” <b>All you need to know is your weight.</b> Once you find your band combo, click the green button to add it to your cart.
-</td>
-</tr>
-<tr>
-<td>
-<h3 class="proTitle"> Athletes weighing <br class="mobile_hide">&lt; 140 lbs</h3>
-<a href="http://rubberbanditz.com/product/best-sellers/medium-heavy-resistance-band-combo">
-<div class="imageContainer"><%= image_tag("Medium-Heavy-Resistance-Band-Combo.jpg", class: "proImg") %>
-<div class="proOver">more info</div></div></a>
-<p class="proText">Medium, Heavy Combo</p>
-<p class="proPrice">$29.99 <a class="atc"href="http://rubberbanditz.com/store/cart?task=add-to-cart-anchor&cart66ItemId=26">Add to Cart</a></p>
-</td>
-<td>
+  <tr>
+    <td colspan='2' style="text-align:left">
+      To find your perfect band combo, pick your weight below, and click the green button to add it to your cart.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h3 class="proTitle"> Athletes weighing <br class="mobile_hide">&lt; 140 lbs</h3>
+      <a href="http://rubberbanditz.com/product/best-sellers/medium-heavy-resistance-band-combo">
+        <div class="imageContainer">
+          <%= image_tag("Medium-Heavy-Resistance-Band-Combo.jpg", class: "proImg") %>
+          <div class="proOver">more info</div>
+        </div>
+      </a>
+      <p class="proText">Medium, Heavy Combo</p>
+      <p class="proPrice">$29.99 <a class="atc"href="http://rubberbanditz.com/store/cart?task=add-to-cart-anchor&cart66ItemId=26">Add to Cart</a></p>
+    </td>
+    <td>
 <h3 class="proTitle">Athletes weighing <br class="mobile_hide">140 - 250 lbs</h3>
 <a href="http://rubberbanditz.com/product/best-sellers/heavy-robust-resistance-band-combo">
 <div class="imageContainer"><%= image_tag("Heavy-Robust-Resistance-Band-Combo.jpg", class: "proImg") %>

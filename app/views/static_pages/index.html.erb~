@@ -14,7 +14,7 @@
   }
   #logo {
 	  max-width:400px;
-	  width:100%;
+	  width:90%;
 	  height:auto;
 
 	}
@@ -134,6 +134,23 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	.mobile_show {
 	    display:none;
 	  }
+	@media only screen and (max-width: 450px){
+	#proTable td {
+	    display:block;
+	    width:auto;
+	    vertical-align:top;
+	    margin-left:auto;
+	    margin-right:auto;
+	  }
+	  #proTable {
+	    width:90%;
+	    padding:0;
+	    margin:0;
+	  }
+	  .mobile_hide {
+	    display:none;
+	  }
+	}
 	@media only screen and (max-width: 640px){
 	  #coupon {
 	    position:relative;
@@ -150,18 +167,10 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	  body {
 	    background-image: none;
 	  }
-	  #proTable td {
-	    display:block;
+	  #proTable {
 	    width:90%;
-	    vertical-align:top;
 	    margin-left:auto;
 	    margin-right:auto;
-	  }
-	  #proTable {
-	    width:auto;
-	    
-	    padding:0;
-	    margin:0;
 	  }
 	  #testimonial {
 	    display:block;
@@ -169,9 +178,6 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	    width:90%;
 	    margin-left:auto;
 	    margin-right:auto;
-	  }
-	  .mobile_hide {
-	    display:none;
 	  }
 	  .atc {
 	    display:block;
@@ -182,7 +188,6 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 	    padding:15px;
 	    margin-top:5px;
 	  }
-	  
 	}
   </style>
 </head>
@@ -199,7 +204,7 @@ box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.71);
 <table id="proTable">
 <tr>
 <td colspan='2' style="text-align:left">
-The most common question we get at Rubberbanditz is “which band is right for me?” <b>All you need to know is your weight.</b> Once you find your band combo, click the green button to add it to your cart.
+To find your perfect band combo, pick your weight below, and click the green button to add it to your cart.
 </td>
 </tr>
 <tr>
